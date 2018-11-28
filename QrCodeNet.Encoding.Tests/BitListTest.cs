@@ -41,8 +41,8 @@ namespace QrCodeNet.Encoding.Tests
         [TestCase(new[] { O }, 0, 1, new[] { O, O }, TestName = "[0].Append([0])=[0,0]")]
         [TestCase(new[] { O, l, l, O }, 25, 6, new[] { O, l, l, O, l, l, O, l, O, O }, TestName = "[0110].Append([110100;6])=[0110110100]")] //  25 = 110100
         [TestCase(new[] { O, l, l, O }, 25, 3, new[] { O, l, l, O, l, O, O }, TestName = "[0110].Append([110100;6])=[0110110100]")] //  25 = 110100
-        [TestCase(new[] { O }, 0, -11, new[] { O, O }, ExpectedException = typeof(ArgumentOutOfRangeException), TestName = "[0].Append([0;-1])=[0,0] => Exception")]
-        [TestCase(new[] { O }, 0, 33, new[] { O, O }, ExpectedException = typeof(ArgumentOutOfRangeException), TestName = "[0].Append([0;33])=[0,0] => Exception")]
+//        [TestCase(new[] { O }, 0, -11, new[] { O, O }, ExpectedException = typeof(ArgumentOutOfRangeException), TestName = "[0].Append([0;-1])=[0,0] => Exception")]
+//        [TestCase(new[] { O }, 0, 33, new[] { O, O }, ExpectedException = typeof(ArgumentOutOfRangeException), TestName = "[0].Append([0;33])=[0,0] => Exception")]
         public void Add(bool[] initial, int value, int bitCount, bool[] expected)
         {
             var target = new BitList();
